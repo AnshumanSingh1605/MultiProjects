@@ -29,6 +29,7 @@ the API key assigned to your account.
 * Open the project in XCode. If previous `pod install` command was successful, open the file called `MultiProjects.xcworkspace`
 * Update the `api-key` with your owned sign up key from the New York Times developer portal.
 * Traverse to `MultiProjects/EndPoints/EndPoints/Requisites/APIConstants` and replace the `apiKey` with your own key.
+* Make sure that current selected scheme is `TimeLine`.
 * To build the project, Press the play button at the top of XCode or type `CMD + r`
 
 
