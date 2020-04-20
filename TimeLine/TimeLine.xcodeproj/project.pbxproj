@@ -15,6 +15,8 @@
 		3CA65806244DF9E10060C051 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CA65804244DF9E10060C051 /* LaunchScreen.storyboard */; };
 		3CA65811244DF9E10060C051 /* TimeLineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA65810244DF9E10060C051 /* TimeLineTests.swift */; };
 		3CA6581C244DF9E10060C051 /* TimeLineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA6581B244DF9E10060C051 /* TimeLineUITests.swift */; };
+		3CA65850244DFD6C0060C051 /* Endpoints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA6584F244DFD6C0060C051 /* Endpoints.framework */; };
+		3CA65851244DFD6C0060C051 /* Endpoints.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA6584F244DFD6C0060C051 /* Endpoints.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		56B648E98FF688B89F96F098 /* libPods-TimeLine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A513C6B6B97A72C4792B4143 /* libPods-TimeLine.a */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +37,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3CA65852244DFD6C0060C051 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3CA65851244DFD6C0060C051 /* Endpoints.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		3CA657F6244DF9DF0060C051 /* TimeLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA657F9244DF9DF0060C051 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +66,7 @@
 		3CA65817244DF9E10060C051 /* TimeLineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeLineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA6581B244DF9E10060C051 /* TimeLineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineUITests.swift; sourceTree = "<group>"; };
 		3CA6581D244DF9E10060C051 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CA6584F244DFD6C0060C051 /* Endpoints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Endpoints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A513C6B6B97A72C4792B4143 /* libPods-TimeLine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TimeLine.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE10148473D5274F5A5C7D7D /* Pods-TimeLine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeLine.release.xcconfig"; path = "Target Support Files/Pods-TimeLine/Pods-TimeLine.release.xcconfig"; sourceTree = "<group>"; };
 		F509854DC1D3BF4684D0D15F /* Pods-TimeLine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeLine.debug.xcconfig"; path = "Target Support Files/Pods-TimeLine/Pods-TimeLine.debug.xcconfig"; sourceTree = "<group>"; };
@@ -61,6 +78,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56B648E98FF688B89F96F098 /* libPods-TimeLine.a in Frameworks */,
+				3CA65850244DFD6C0060C051 /* Endpoints.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +102,7 @@
 		08C38DFA5E320DF2B85AE573 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3CA6584F244DFD6C0060C051 /* Endpoints.framework */,
 				A513C6B6B97A72C4792B4143 /* libPods-TimeLine.a */,
 			);
 			name = Frameworks;
@@ -172,6 +191,7 @@
 				3CA657F2244DF9DF0060C051 /* Sources */,
 				3CA657F3244DF9DF0060C051 /* Frameworks */,
 				3CA657F4244DF9DF0060C051 /* Resources */,
+				3CA65852244DFD6C0060C051 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

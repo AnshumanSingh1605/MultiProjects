@@ -10,6 +10,7 @@
 		3CA6583D244DF9F50060C051 /* Endpoints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA65833244DF9F40060C051 /* Endpoints.framework */; };
 		3CA65842244DF9F50060C051 /* EndpointsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA65841244DF9F50060C051 /* EndpointsTests.swift */; };
 		3CA65844244DF9F50060C051 /* Endpoints.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CA65836244DF9F40060C051 /* Endpoints.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CA6584E244DFD4C0060C051 /* APIConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA6584D244DFD4C0060C051 /* APIConnectivity.swift */; };
 		8FA1B7EEC0818CD999848553 /* libPods-Endpoints.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 856D415489B0D54A2CA2BE6B /* libPods-Endpoints.a */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		3CA6583C244DF9F50060C051 /* EndpointsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EndpointsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA65841244DF9F50060C051 /* EndpointsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointsTests.swift; sourceTree = "<group>"; };
 		3CA65843244DF9F50060C051 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CA6584D244DFD4C0060C051 /* APIConnectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConnectivity.swift; sourceTree = "<group>"; };
 		65F258C8455E3D2D55F4B00A /* Pods-Endpoints.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Endpoints.debug.xcconfig"; path = "Target Support Files/Pods-Endpoints/Pods-Endpoints.debug.xcconfig"; sourceTree = "<group>"; };
 		856D415489B0D54A2CA2BE6B /* libPods-Endpoints.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Endpoints.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0BC66D0F3EDF958AF1C8B43 /* Pods-Endpoints.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Endpoints.release.xcconfig"; path = "Target Support Files/Pods-Endpoints/Pods-Endpoints.release.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			children = (
 				3CA65836244DF9F40060C051 /* Endpoints.h */,
 				3CA65837244DF9F40060C051 /* Info.plist */,
+				3CA6584D244DFD4C0060C051 /* APIConnectivity.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				TargetAttributes = {
 					3CA65832244DF9F40060C051 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					3CA6583B244DF9F50060C051 = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -246,6 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CA6584E244DFD4C0060C051 /* APIConnectivity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +397,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 65F258C8455E3D2D55F4B00A /* Pods-Endpoints.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -407,6 +413,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.anshuman.Endpoints;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -416,6 +423,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B0BC66D0F3EDF958AF1C8B43 /* Pods-Endpoints.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -439,6 +447,7 @@
 		3CA6584B244DF9F50060C051 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = EndpointsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -456,6 +465,7 @@
 		3CA6584C244DF9F50060C051 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = EndpointsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

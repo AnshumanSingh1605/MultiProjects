@@ -7,10 +7,20 @@
 //
 
 import SwiftUI
+import Endpoints
 
 struct ContentView: View {
     var body: some View {
         Text("Hello, World!")
+            .onAppear() {
+                self.run()
+        }
+    }
+    
+    private func run() {
+        AwesomeAPIClient.shared.testRun {
+            print("API succeeded.....")
+        }
     }
 }
 
