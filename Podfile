@@ -16,3 +16,9 @@ target 'Endpoints' do
     pod 'Alamofire', '~> 4.0'
 
 end
+
+target 'EndpointsTests' do
+   # xcodeproj 'Endpoints/EndpointsTests.xcodeproj'
+   #Pods for EndpointsTests
+    pod 'Alamofire', '~> 4.0'
+end
