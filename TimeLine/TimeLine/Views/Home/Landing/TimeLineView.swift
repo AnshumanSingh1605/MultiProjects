@@ -104,7 +104,10 @@ struct TimeLineView : View  {
         .edgesIgnoringSafeArea(.bottom)
         .resignKeyboardOnDragGesture()
         .alert(isPresented: self.$showAlert) {
-            Alerts.showAlert(message: self.alertMessage, dismiss: .ok(nil))
+            if self.alertMessage == .internetError {
+                return Alerts.showAlert(message: .internetError, dismiss: .settings)
+            }
+            return Alerts.showAlert(message: self.alertMessage, dismiss: .ok(nil))
         }
         .onAppear() {
             self.fetchArticles()
@@ -126,10 +129,11 @@ struct TimeLineView : View  {
             
             if let _error = error {
                 switch _error {
-                case .internetUnavailable : Utility.showAlert(message: _error.message, completion: Utility.moveToSettings)
+                case .internetUnavailable :
+                    self.alertMessage = .internetError
                 default : self.alertMessage = .customOptional(error?.message)
-                self.showAlert.toggle()
                 }
+                self.showAlert.toggle()
             } else {
                 guard let _model = model else {
                     self.alertMessage = .serverError

@@ -32,7 +32,6 @@ struct ArticleModel : Codable , Identifiable {
     let publishedDate, updated, section: String
     let subsection: String
     let nytdsection, adxKeywords: String
-    //let column: JSONNull?
     let byline: String
     let type: String
     let title, abstract: String
@@ -47,7 +46,6 @@ struct ArticleModel : Codable , Identifiable {
         case publishedDate = "published_date"
         case updated, section, subsection, nytdsection
         case adxKeywords = "adx_keywords"
-        //case column
         case byline, type, title, abstract
         case desFacet = "des_facet"
         case orgFacet = "org_facet"
@@ -57,29 +55,3 @@ struct ArticleModel : Codable , Identifiable {
         case etaID = "eta_id"
     }
 }
-
-// MARK: - Encode/decode helpers
-//class JSONNull: Codable, Hashable {
-//
-//    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-//        return true
-//    }
-//
-//    public var hashValue: Int {
-//        return 0
-//    }
-//
-//    public init() {}
-//
-//    public required init(from decoder: Decoder) throws {
-//        let container = try decoder.singleValueContainer()
-//        if !container.decodeNil() {
-//            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-//        }
-//    }
-//
-//    public func encode(to encoder: Encoder) throws {
-//        var container = encoder.singleValueContainer()
-//        try container.encodeNil()
-//    }
-//}
