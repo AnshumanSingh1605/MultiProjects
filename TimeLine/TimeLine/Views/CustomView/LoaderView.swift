@@ -41,7 +41,7 @@ struct LoaderView<Content>: View where Content: View {
                     .blur(radius: self.isShowing ? 3 : 0)
 
                 VStack(spacing :20) {
-                    ActivityIndicator(isAnimating: .constant(true)).zIndex(2)
+                    ActivityIndicator(isAnimating: self.$isShowing).zIndex(2)
                     Text.text(.pleaseWait)
                         .foregroundColor(Color(white: 0.5))
                         .fontWeight(.semibold)
